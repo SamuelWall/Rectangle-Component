@@ -1,9 +1,9 @@
 {
   "name": "rectangle-component",
-  "description": "Adalo rectangle component that allows for magic text inputs as colors",
+  "description": "Rectangle that allows for magic text as the color codes for fill and border colors.",
   "author": "Samuel Wolnerman, Ben Gilman",
-  "version": "1.0.0",
-  "displayName": "Rectangle",
+  "version": "1.0.1",
+  "displayName": "Magic Color Rectangle",
   "license": "MIT",
   "main": "index.js",
   "scripts": {

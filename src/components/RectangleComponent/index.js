@@ -5,7 +5,6 @@ class RectangleComponent extends Component {
 
 	componentToHex = (c) => {
 	  var hex = c.toString(16);
-		console.log(hex)
 	  return hex.length == 1 ? "0" + hex : hex;
 	}
 
@@ -15,6 +14,8 @@ class RectangleComponent extends Component {
 
 	parseColor = (colorText) => {
 		let finalColor;
+		if(colorText == undefined)
+			return this.props.defaultColor;
 		if(colorText.indexOf('#') != -1){
 			finalColor = colorText;
 		}
@@ -33,24 +34,26 @@ class RectangleComponent extends Component {
 				finalColor = "#000000"
 			}
 		}
-		console.log(finalColor)
 		return finalColor
 
 	}
-	styles = {
-		rectangle: {
-			width: this.props.width,
-			height: this.props.height,
-			backgroundColor: this.parseColor(this.props.background),
-			borderRadius: this.props.borderRadius,
-			borderWidth: this.props.borderWidth,
-			borderColor: this.parseColor(this.props.borderColor)
-		}
-	}
+
 	render() {
+		const styles = {
+			rectangle: {
+				width: this.props._width,
+				height: this.props._height,
+				backgroundColor: this.props.background.trim() == "" ? this.props.defaultColor : this.parseColor(this.props.background),
+				borderRadius: this.props.borderRadius,
+				borderWidth: this.props.border.enabled ? this.props.border.borderWidth : 0,
+				borderColor: this.parseColor(this.props.border.borderColor)
+			}
+		}
 
 		return (
-			<View style={this.styles.rectangle}>
+			<View style={styles.rectangle}
+			key={`rectView.${this.props._width+this.props._height+this.props.borderRadius}`}
+			>
 
 			</View>
 		)

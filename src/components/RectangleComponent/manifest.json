@@ -6,22 +6,11 @@
   "resizeY": true,
   "props": [
     {
-      "name": "height",
-      "displayName": "Height",
-      "type": "number",
-      "default": 50
-    },
-    {
-      "name": "width",
-      "displayName": "Width",
-      "type": "number",
-      "default": 100
-    },
-    {
       "name": "background",
       "displayName": "Rectangle Color",
       "type": "text",
-      "default": "#ef612d"
+      "default": "",
+      "helpText":"Takes in an RGB or hex color value. For example: (0,15,255) or #0fe45d"
     },
     {
       "name": "borderRadius",
@@ -32,17 +21,38 @@
 
     },
     {
-      "name": "borderWidth",
-      "displayName": "Border Thickness",
-      "type": "number",
-      "default": 0,
-      "control": { "type": "slider", "max": 20, "min": 0 }
-    },
+      "name": "defaultColor",
+      "displayName": "Default Color",
+      "type": "color",
+      "default": "@primary",
+      "helpText": "Color defaulted to if input is invalid"
+    }
+  ],
+  "childComponents": [
     {
-      "name": "borderColor",
-      "displayName": "Border Color",
-      "type": "text",
-      "default": "#000000"
+      "name": "border",
+      "displayName": "Border",
+      "props": [
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "borderWidth",
+          "displayName": "Border Thickness",
+          "type": "number",
+          "default": 2,
+          "control": { "type": "slider", "max": 20, "min": 0 }
+        },
+        {
+          "name": "borderColor",
+          "displayName": "Border Color",
+          "type": "text",
+          "default": "#000000",
+          "helpText":"Takes in an RGB or hex color value. For example: (0,15,255) or #0fe45d"
+        }
+      ]
     }
   ]
 }
