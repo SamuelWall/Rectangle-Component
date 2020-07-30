@@ -39,11 +39,14 @@ class RectangleComponent extends Component {
 	}
 
 	render() {
+		let bgColor = this.props.background;
+		if(bgColor == undefined || bgColor.trim() == "")
+				bgColor = this.props.defaultColor
 		const styles = {
 			rectangle: {
 				width: this.props._width,
 				height: this.props._height,
-				backgroundColor: this.props.background.trim() == "" ? this.props.defaultColor : this.parseColor(this.props.background),
+				backgroundColor: bgColor,
 				borderRadius: this.props.borderRadius,
 				borderWidth: this.props.border.enabled ? this.props.border.borderWidth : 0,
 				borderColor: this.parseColor(this.props.border.borderColor)

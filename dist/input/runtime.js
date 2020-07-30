@@ -1,1 +1,3 @@
-export {    RectangleComponent as RectangleComponent,  } from '../../index.js'
+export {
+  RectangleComponent as RectangleComponent,
+} from '../../index.js'
