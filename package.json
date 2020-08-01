@@ -2,7 +2,7 @@
   "name": "rectangle-component",
   "description": "Rectangle that allows for magic text as the color codes for fill and border colors.",
   "author": "Samuel Wolnerman, Ben Gilman",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "displayName": "Magic Color Rectangle",
   "license": "MIT",
   "main": "index.js",

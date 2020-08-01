@@ -1,5 +1,5 @@
 {
-  "displayName": "Rectangle Component",
+  "displayName": "Rectangle",
   "defaultWidth": 100,
   "defaultHeight": 50,
   "components": "./index.js",
